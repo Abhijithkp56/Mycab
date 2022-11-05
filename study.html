@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCabs_Home</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 100%;
+            overflow-x: hidden;
+
+
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topfull {
+            position: fixed;
+            display: flex;
+            width: 100vw;
+            height: 10vh;
+
+            z-index: 5;
+            margin: 0;
+
+
+
+        }
+
+        .topleft {
+            width: 60vw;
+            height: 10vh;
+            background-color: black;
+            color: white;
+            font-size: large;
+            display: flex;
+            align-items: center;
+            padding: 0 0 0 50px;
+        }
+
+        .topright {
+            width: 40vw;
+            height: 10vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .button {
+            width: 7vw;
+            height: 5vh;
+            border-radius: 1cm;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(37, 36, 36);
+        }
+
+        .button:hover {
+            background-color: rgb(66, 64, 64);
+            cursor: pointer;
+        }
+
+        .btn1:hover {
+            background-color: #2a2a2a;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        .btn1 {
+            width: 7vw;
+            height: 5vh;
+            border-radius: 1cm;
+
+            background-color: white;
+            color: black;
+            transition: .2s;
+
+        }
+
+
+
+
+        .middle {
+            margin-top: 10vh;
+            width: 100%;
+            height: 1000px;
+
+            display: flex;
+            background-image: url(lexi-anderson-G8wPrJyNqWQ-unsplash.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .form {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+        }
+
+        .table {
+            font-size: x-large;
+            background-color: white;
+            width: 400px;
+            border-radius: 10px;
+            height: 500px;
+            padding: 30px;
+            line-height: 10px;
+            /*trbl*/
+            margin: 0 200px 0 0;
+
+        }
+
+        input[type=text] {
+            width: 90%;
+            padding: 10px;
+            height: 30px;
+            border-radius: 10px;
+
+            background-color: #f1f1f1;
+            border: 0ch;
+            margin: 20px 0 20px 0;
+
+        }
+
+        label {
+            padding: 10px 0 10px 0;
+            margin: 50px 0 20px 0;
+        }
+
+        .btn {
+            background-color: black;
+            width: 95%;
+            color: white;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 30px 0px 10px 0;
+            opacity: 1;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(31, 29, 29);
+            opacity: .8;
+        }
+
+        .middleleft {
+            width: 600px;
+            height: 100px;
+            display: flex;
+            color: white;
+            margin: 10px 0 0 100px;
+            font-size: x-large;
+
+
+        }
+
+        /* our standards pic */
+        .middle2 {
+            background-color: white;
+            width: 70%;
+            height: 500px;
+            margin-left: 30%;
+            background-image: url(https://images.pexels.com/photos/4606338/pexels-photo-4606338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+
+        }
+
+        /* Our standards writing */
+        .midA {
+
+            width: 500px;
+            height: 200px;
+            margin-left: -450px;
+            margin-top: 300px;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        /* Our standard show button position */
+        .btnshmr {
+            width: 100px;
+            height: 100px;
+            margin-top: 400px;
+            margin-left: 800px;
+        }
+
+        /* Show more button specifications common */
+        .buttonshowmore {
+            background-color: white;
+            color: black;
+            width: 100px;
+            height: 50px;
+            padding: 12px;
+            border-radius: 8px;
+            transition: .2s;
+            border: 0;
+        }
+
+        .buttonshowmore:hover {
+            background-color: rgb(230, 225, 225);
+            cursor: pointer;
+        }
+
+        /* The relaible standard */
+        .middle3 {
+            background-color: black;
+            width: 70%;
+            height: 500px;
+            background-image: url(https://images.pexels.com/photos/3652766/pexels-photo-3652766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+
+
+        }
+
+        /* The reliable standard writing */
+
+        .midB {
+            width: 430px;
+            height: 200px;
+            margin-left: 1080px;
+            margin-top: 150px;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        /* The reliable standard button */
+        .btnshmr2 {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+            margin-left: 1350px;
+
+        }
+
+        /* The secure standard  */
+        .middle4 {
+            background-color: black;
+            width: 70%;
+            height: 500px;
+            margin-left: 30%;
+            background-image: url(https://images.pexels.com/photos/4606336/pexels-photo-4606336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+
+
+        }
+
+        /* The secure standard writing*/
+
+        .midC {
+            width: 450px;
+            height: 200px;
+            margin-left: -450px;
+            margin-top: 100px;
+            color: white;
+            font-size: 20px;
+
+
+        }
+
+        /* The secure standard button */
+        .btnshmr3 {
+            width: 100px;
+            height: 100px;
+            margin-top: 400px;
+            margin-left: 880px;
+        }
+
+        /* The premium standard */
+        .middle5 {
+            background-color: black;
+            width: 70%;
+            height: 500px;
+            background-image: url(https://images.pexels.com/photos/2399254/pexels-photo-2399254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        /* The premium standard  writing*/
+        .midD {
+            width: 450px;
+            height: 200px;
+            margin-left: 1070px;
+            margin-top: 150px;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        /* The premium standard button */
+        .btnshmr4 {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+            margin-left: 1350px;
+        }
+    </style>
+    <div class="main">
+        <div class="topfull">
+            <div class="topleft">
+                <h1 style="position:absolute ; left:20px;">MyCabs</h1>
+            </div>
+            <div class="topright">
+                <div class="button">Contact Us</div>
+                <div class="button">About Us</div>
+                <form method="get" action="SignUp.html">
+                    <button type="submit" class="btn1">Sign Up</button>
+                </form>
+                <form method="get" action="signin.html">
+                    <button type="submit" class="btn1">Sign In</button>
+                </form>
+
+
+            </div>
+        </div>
+        <div class="middle">
+            <div class="middleleft">
+                <h1>Book your Cabs now and Enjoy!!</h1>
+            </div>
+            <div class="form">
+                <form method="post" action="" class="table">
+                    <h2 style="margin:50px 0 100px 0;"><b>Book Your Cab</b></h2>
+                    <label for="pickup"><b>Pick Up</b></label><br>
+                    <input type="text" id="pickup" name="pickup" placeholder="Pickup Place" required><br>
+                    <label for="destination"> <b>Destination</b></label><br>
+                    <input type="text" id="destination" name="destination" placeholder="Destination" required><br>
+                    <button type="submit" class="btn"><b>Search Cabs</b></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="middle2">
+            <div class="midA">
+                <h1>Our Standards</h1>
+                <p>We have set of standars for your betterment and comfort. We value you more than anything.</p>
+            </div>
+            <div class="btnshmr">
+                <form method="post" action="">
+                    <button type="submmit" class="buttonshowmore"><b> More</b></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="middle3">
+            <div class="midB">
+                <h1>The Reliable Standard</h1>
+                <p>With professional drivers, equipped vehicles and uncompromising customer service, you are in <wbr> safe hands.
+                </p>
+            </div>
+            <div class="btnshmr2">
+                <form method="post" action="">
+                    <button type="submmit" class="buttonshowmore"><b> More</b></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="middle4">
+            <div class="midC">
+                <h1>The Secure Standard</h1>
+                <p>Qualified drivers with experience and quality tested vehicles with full time monitoring system will
+                    make you feel safe in any extreme conditions</p>
+            </div>
+            <div class="btnshmr3">
+                <form method="post" action="">
+                    <button type="submmit" class="buttonshowmore"><b> More</b></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="middle5">
+            <div class="midD">
+                <h1>The Premium Standard</h1>
+                <p>With the exceptional variety of cabs available you can choose your level of luxuary and comfort.</p>
+            </div>
+            <div class="btnshmr4">
+                <form method="post" action="">
+                    <button type="submmit" class="buttonshowmore"><b> More</b></button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+
+
+
+
+</body>
+
+</html
